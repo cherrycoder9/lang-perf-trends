@@ -5,7 +5,7 @@
 document.getElementById('loadModuleBtn').addEventListener('click', async () => {
     try {
         // 모듈을 필요할 때만 로드함 
-        // 
+        // import()는 비동기 함수(async/await)를 사용해 실행할 수 있음 
         const module = await import('./utils.js');
 
         // 가져온 모듈의 함수 실행
