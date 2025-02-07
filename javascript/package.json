@@ -2,5 +2,8 @@
   "type": "module",
   "devDependencies": {
     "eslint": "^9.19.0"
+  },
+  "dependencies": {
+    "jsdom": "^26.0.0"
   }
 }
