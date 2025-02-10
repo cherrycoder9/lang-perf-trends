@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://naver.com" referrerpolicy="no-referrer">이동하기</a>
+    <!-- Referer 정보를 외부 사이트에 전송하지 않음 -->
+    <!-- referrerpolicy="no-referrer": Referer 헤더만 제거 (개인정보 보호) -->
+    <!-- rel="noreferrer": 레퍼러 헤더 제거 + window.opener 차단 -->
+    <!-- 옵션별 차이점 -->
+    <!-- no-referrer: 레퍼러 절대 전송 안함 -->
+    <!-- no-referrer-when-downgrade: HTTPS에서 HTTPS로 전송될땐 레퍼러 전송, HTTPS에서 HTTP로 전송할땐 레퍼러 전송 안함
+         -->
+    <!-- origin: 도메인만 전달함(경로정보 X) -->
+    <!-- origin-when-cross-origin: 같은사이트(도메인)면 전체 URL전달, 다른 사이트면 도메인만 전달 -->
+    <!-- same-origin: 같은 사이트(도메인)일 때만 전체 URL전달, 다른 사이트면 전달 X -->
+    <!-- strict-origin: https에서 https로 이동할 때만 도메인 전달, http로 이동시 전달 X -->
+    <!-- strict-origin-when-cross-origin: 같은 사이트면 전체 URL 전달, 다른 사이트면 도메인만 전달 -->
+    <!-- unsafe-rul: 무조건 전체 URL 전달 (보안취약) -->
+</body>
+
+</html>
