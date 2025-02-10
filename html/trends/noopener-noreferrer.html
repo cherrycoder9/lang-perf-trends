@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://naver.com" target="_blank" rel="noopener noreferrer">네이버 이동</a>
+    <!-- 문제1: 새 창을 열면 window.opener를 통해 원본 페이지를 제어할 수 있음 -->
+    <!-- noopener: 새창(_blank) 보안 취약점 방지 -->
+    <!-- 새 창에서는 window.opener 객체를 통해 원본페이지를 조작할 수 있음 -->
+    <!-- 악성 웹사이트로 연결될 경우 window.opener.location = 'URL' 같은 방식으로 -->
+    <!-- 원본 페이지를 피싱 사이트로 변조할 수 있음 -->
+    <!-- noopener 추가하면 새 창에서 window.opener 접근이 차단됨 -->
+    <!-- 악성 사이트가 원본 페이지를 제어할 수 없게 되어 보안이 강화됨 -->
+
+    <!-- 문제2: 링크를 클릭하면 원본 페이지의 URL이 전송됨 -->
+    <!-- noreferrer: HTTP 리퍼러(Referer) 정보 노출 방지 -->
+    <!-- 기본적으로 <a href="URL">을 클릭하면 URL 서버는 어떤 페이지에서 링크를 눌렀는지 알수 있음 -->
+    <!-- 사용자가 어떤 사이트에서 왔는지 추적할 수 있는 개인정보 유출 문제가 발생할 가능성 -->
+    <!-- noreferrer 추가하면 Referer 헤더가 전송되지 않음. 방문기록 보호 -->
+    <!-- 특히 로그인된 페이지나 민감정보를 포함한 URL에서 외부 사이트로 이동할때 유용함 -->
+</body>
+
+</html>
