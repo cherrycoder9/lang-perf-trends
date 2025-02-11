@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 최근 다크모드 스타일 -->
+    <!-- 시스템 다크 모드 설정 자동 반영 -->
+    <!-- 하지만 토글로 바꾸고 싶다면 localStorage에 저장하는 방식을 쓰거나 -->
+    <!-- 블랙/화이트 이외에 색상테마 만드려면 JS 써야함 -->
+    <!-- 여러 테마를 만들거면 :root + CSS 변수를 쓰는 것을 추천 -->
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<!-- html class로 dark-mode를 지정하고 js로 toggle 함수 호출은 옛날 방식 -->
+<!-- 1. OS에서 다크모드를 활성화했더라도 웹사이트는 기본적으로 라이트 모드로 시작됨 -->
+<!-- 2. CSS가 자바스크립트에 의존적이 됨 -->
+<!-- 3. 페이지를 새로고침하면 라이트 모드로 초기화됨  -->
+
+<body>
+    <p>다크 모드 색상 테스트 </p>
+</body>
+
+</html>

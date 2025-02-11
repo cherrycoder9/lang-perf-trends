@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/signin" method="post">
+        <label for="username">아이디: </label>
+        <input type="text" id="username" name="username" autocomplete="username" />
+
+        <label for="password">암호: </label>
+        <input type="password" id="password" name="password" autocomplete="current-password" />
+
+        <button type="submit">로그인</button>
+    </form>
+
+    <!-- 과거에는 autocomplete="off"를 사용하면 입력데이터를 브라우저가
+     저장하지 않도록 막을 수 있어 보안 강화에 도움된다고 생각했음 -->
+    <!-- 하지만 최신 브라우저들은 autocomplete="off"를 무시하고 자동완성을 강제로 활성화하는 경우가 많아짐 -->
+    <!-- 입력 필드에 정확한 autocomplete 값을 명시적으로 지정하는게 더 안전한 접근 방식으로 자리잡음 -->
+    <!-- 사용자 경험 향상, 웹 표준 준수 및 SEO 향상에 도움됨 -->
+
+</body>
+
+</html>
