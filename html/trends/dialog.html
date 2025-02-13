@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 과거엔 JS로 직접 모달을 만들고 스타일링함 -->
+    <!-- 불필요한 js코드 필요, display를 직접 조작해야함 -->
+    <!-- 키보드 접근성 문제가 있음 -->
+    <!-- tabindex 관리 필요 -->
+    <!-- css로 배경 처리를 직접 해야했음 -->
+
+    <!-- 최근엔 dialog 태그로 모달 구현 -->
+    <!-- 모달이 열리면 자동으로 포커스가 이동됨 -->
+    <!-- ESC 키 자동지원 -->
+    <!-- CSS추가 없이 배경 어두워짐 -->
+    <!-- ARIA 접근성이 기본으로 적용됨 -->
+    <button id="openDialog">모달창 열기</button>
+
+    <dialog id="myDialog">
+        <p>현대적인 모달창입니다.</p>
+        <button id="closeDialog">닫기</button>
+    </dialog>
+
+    <script>
+        const dialog = document.getElementById("myDialog");
+        const openButton = document.getElementById("openDialog");
+        const closeButton = document.getElementById("closeDialog");
+
+        openButton.addEventListener("click", () => dialog.showModal());
+        closeButton.addEventListener("click", () => dialog.close());
+        // 닫기버튼 안눌러도 아무곳이나 클릭하면 모달 닫기
+        dialog.addEventListener("click", (event) => {
+            if (event.target === dialog) {
+                dialog.close();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
