@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 보안이 취약한 iframe 코드 -->
+    <!-- sandbox 속성이 없고, allow 속성이 과도하게 허용됨 -->
+    <iframe src="https://untrusted-site.com" frameborder="0" width="600" height="400"></iframe>
+    <!-- 
+        문제점
+        1. iframe 내부에서 JavaScript가 자유롭게 실행됨 (XSS 공격 가능)
+        2. 사용자의 세션 정보나 쿠키를 탈취할 가능성이 있음
+        3. clickjacking에 취약할 수 있음
+        4. 마이크, 카메라, 풀스크린 접근 등의 보안 위험이 있을수 있음 
+    -->
+
+    <!-- 보안이 강화된 iframe 코드 -->
+    <!-- sandbox 속성으로 실행 제한을 강화하고 필요한 권한만 최소 허용 -->
+    <iframe src="https://trusted-site.com" frameborder="0" width="600" height="400"
+        sandbox="allow-scripts allow-same-origin" allow="autoplay; encrypted-media">
+    </iframe>
+</body>
+
+</html>
