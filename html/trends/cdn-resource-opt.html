@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- preconnect: 브라우저가 미리 DNS 요청을 수행 -->
+    <!-- Google Fonts CSS 파일을 로드하는 일반적 요청이므로 CORS를 따로 적용할 필요가 없음 -->
+    <!-- 즉, 아래 url에서 제공하는 css파일은 같은 사이트에서 요청하는것과 다를바 없으므로 -->
+    <!-- crossorigin을 지정할 필요 없음 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- 아래 url은 실제 폰트 파일을 제공함, CORS 영향이 있음 -->
+    <!-- 폰트파일은 HTML 문서와 출처가 다름, 즉 cross-origin 요청이 발생함 -->
+    <!-- crossorigin을 생략하면 브라우저는 폰트 파일을 CORS 정책 위반으로 취급해 정상 로드하지 못할수 있음 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</body>
+
+</html>

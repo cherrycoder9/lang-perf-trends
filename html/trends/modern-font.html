@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- woff2 우선 사용 + font-display: swap 적용 -->
+    <link rel="preload" href="MyFont.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <style>
+        @font-face {
+            font-family: 'MyFont';
+            /* woff2 사용, 용량 감소 및 렌더링 속도 향상 */
+            src: url('MyFont.woff2') format('woff2'),
+                /* 백업폰트 */
+                url('MyFont.woff') format('woff');
+            /* 브라우저가 기본 폰트로 먼저 표시후 폰트 로딩 완료시 변경, 깜빡임 방지 및 빠른로딩 */
+            font-display: swap;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
