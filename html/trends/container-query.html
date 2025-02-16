@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* 컨테이너 쿼리를 적용할 부모 요소 */
+        .container {
+            /* 부모 요소의 크기에 따라 자식 스타일 적용 */
+            container-type: inline-size;
+            width: 50%;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        /* 기본 스타일 */
+        .box {
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        /* 부모 컨테이너 크기에 따라 스타일 변경 */
+        /* 기존의 @media 쿼리는 화면 전체의 크기를 기준으로 반응형 디자인을 적용했음 */
+        /* 그건 컴포넌트 단위의 반응형을 원할 경우 불필요한 중복 코드가 많아지고 복잡성 증가함 */
+        @container (min-width: 400px) {
+            .box {
+                background-color: lightcoral;
+            }
+        }
+
+        @container (min-width: 800px) {
+            .box {
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p>사이즈 재조정</p>
+            <p>사이즈 재조정</p>
+            <p>사이즈 재조정</p>
+            <p>사이즈 재조정</p>
+        </div>
+    </div>
+</body>
+
+</html>
