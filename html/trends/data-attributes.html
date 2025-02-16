@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        /* 공통 클래스를 사용해 스타일을 재사용 가능하게 함 */
+        .product {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        /* data-* 속성을 활용해 동적으로 스타일 적용 */
+        .product[data-category="electronics"] {
+            background-color: lightblue;
+        }
+
+        .product[data-category="furniture"] {
+            background-color: lightgreen;
+        }
+
+        .product[data-category="clothing"] {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product" data-id="101" data-category="electronics">상품 101</div>
+    <div class="product" data-id="102" data-category="furniture">상품 102</div>
+    <div class="product" data-id="103" data-category="clothing">상품 103</div>
+
+    <script>
+        // 모든 .product 요소에 이벤트 리스너 적용
+        document.querySelectorAll('.product').forEach(product => {
+            product.addEventListener('click', function () {
+                const productId = this.getAttribute('data-id');
+                alert(`상품 ${productId} 선택됨!`);
+            });
+        })
+    </script>
+</body>
+
+</html>
