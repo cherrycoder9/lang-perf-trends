@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <!-- 전화번호 입력 -->
+        <label for="ohibe">전화번호:</label>
+        <input type="tel" name="phone" id="phone" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10,11}"
+            placeholder="010-1234-0000" />
+    </form>
+
+    <!-- inputmode 속성의 주요값 -->
+    <!-- none, text, decimal, numeric, tel, email, url -->
+    <!-- inputmode="none"을 사용하면 키보드 입력을 막아 키로거 공격을 방어하는데 활용 -->
+
+    <!-- type만 사용할 경우의 한계점 -->
+    <!-- type="number"를 사용하면 숫자입력만 가능하도록 강제하지만, 
+        소수점 입력이 제한되거나 불필요한 UI(증가/감소 버튼)가 추가됨 -->
+    <!-- type="email"을 사용하면 이메일 형식 검증이 가능하지만, 
+        키보드 배치는 브라우저마다 다르게 제공됨 -->
+
+    <!-- 
+        type="tel"을 사용하면 기본적으로 전화번호 입력이 가능하지만
+        숫자 키패드 강제 지정이 불가능할 수 있음    
+    -->
+
+    <!-- 
+        type="text"와 함께 inputmode="numeric"을 설정하면 문자열로 숫자를
+        입력받으면서도 숫자 키패드를 제공할 수 있음
+
+        type="number"를 사용하면 value가 숫자로 강제 변환되지만, 
+        inputmode="numeric"을 사용하면 입력값이 문자열 그대로 유지됨
+        (ex: 00123처럼 앞에 0이 유지됨)
+
+        inputmode="decimal"을 사용하면 숫자뿐만 아니라 소수점(.) 입력도 가능
+
+        inputmode="tel" 사용하면 전화번호 키패드(*, #, + 포함) 활성화 
+
+        type은 데이터의 형식을 강제하는 역할을 하고
+        inputmode는 키보드 입력 방식을 최적화하는 역할을 함 
+    -->
+
+</body>
+
+</html>
