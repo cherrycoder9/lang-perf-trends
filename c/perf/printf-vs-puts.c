@@ -4,7 +4,7 @@
 #define ITERATIONS 20000
 
 int main() {
-    const char *message = "Hello world";
+    const char *message = "인코딩 테스트";
 
     // 시간 측정을 위한 변수
     clock_t start, end;
