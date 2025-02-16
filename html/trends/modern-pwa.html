@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 예전 PWA 설정 방식은 서비스 워커와 manifest.json을 제대로 활용하지 않는 문제가 많았음 -->
+    <!-- 
+        1. manifest.json에서 display 모드 설정이 부족했음 -> 웹앱과 네이티브 앱 간 일관성 부족
+        2. 서비스 워커에서 fetch 이벤트를 무조건 캐싱 -> 최신 콘텐츠 반영이 어려움 
+        3. 오프라인 모드 고려 부족 -> 캐싱 전략이 단순하고 에러 페이지 미구현
+        4. 서비스 워커 등록 코드가 window.onload에 묶여 있어 비효율적 
+     -->
+    <!-- 최신 PWA 트렌드는 더 빠르고 스마트한 네트워크 관리와 웹앱의 네이티브 UX 향상에 중점 -->
+    <!-- 
+        1. manifest.json에 "display_override" 옵션 추가 -> 다양한 브라우저 환경 대응 
+        2. 서비스 워커에서 Cache-first + Network fallback 전략 활용 -> 최신 콘텐츠 유지
+        3. 오프라인 지원을 고려해 404 페이지 캐싱 
+        4. navigator.serviceWorker.ready를 활용해 서비스 워커 등록을 최적화 
+     -->
+    <!-- manifest.json -->
+    <!-- service-worker.js -->
+</body>
+
+</html>
